@@ -35,16 +35,16 @@
     .nav-cta{background:var(--purple)!important;color:white!important;border-radius:8px!important}
     .nav-cta:hover{background:var(--purple2)!important}
 
-    #accueil{min-height:100vh;display:grid;grid-template-columns:1fr 1fr;align-items:center;padding:8rem 4rem 4rem;gap:4rem;position:relative;z-index:2}
-    .hero-eyebrow{display:flex;align-items:center;gap:0.8rem;margin-bottom:1.8rem}
+    #accueil{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:8rem 4rem 4rem;gap:4rem;position:relative;z-index:2;text-align:center}
+    .hero-eyebrow{display:flex;align-items:center;justify-content:center;gap:0.8rem;margin-bottom:1.8rem}
     .hero-eyebrow-line{width:40px;height:1px;background:linear-gradient(90deg,var(--teal),transparent)}
     .hero-eyebrow span{font-family:'JetBrains Mono',monospace;font-size:0.72rem;color:var(--teal);letter-spacing:0.1em}
     .hero-title{font-family:'Syne',sans-serif;font-size:clamp(3rem,5.5vw,5rem);font-weight:800;line-height:1.02;letter-spacing:-0.03em;margin-bottom:1.8rem}
     .hero-title .word{display:inline-block;animation:wordUp 0.7s cubic-bezier(0.16,1,0.3,1) both}
     .w1{animation-delay:0.05s}.w2{animation-delay:0.15s;color:var(--teal)}.w3{animation-delay:0.25s}.w4{animation-delay:0.35s;background:linear-gradient(135deg,var(--purple2),var(--pink));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
     @keyframes wordUp{from{opacity:0;transform:translateY(50px)}to{opacity:1;transform:translateY(0)}}
-    .hero-desc{color:var(--muted);font-size:0.95rem;line-height:1.8;max-width:440px;margin-bottom:2.5rem;animation:fadeUp 0.8s 0.5s ease both}
-    .hero-btns{display:flex;gap:1rem;flex-wrap:wrap;animation:fadeUp 0.8s 0.6s ease both}
+    .hero-desc{color:var(--muted);font-size:0.95rem;line-height:1.8;max-width:600px;margin:0 auto 2.5rem;animation:fadeUp 0.8s 0.5s ease both}
+    .hero-btns{display:flex;gap:1rem;flex-wrap:wrap;animation:fadeUp 0.8s 0.6s ease both;justify-content:center}
     @keyframes fadeUp{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
 
     .btn{display:inline-flex;align-items:center;gap:0.5rem;padding:0.85rem 1.7rem;border-radius:10px;font-size:0.88rem;font-weight:600;text-decoration:none;transition:all 0.25s;border:none;cursor:none;font-family:'Space Grotesk',sans-serif}
@@ -151,6 +151,10 @@
     .projet-card.visible{opacity:1;transform:translateY(0)}
     .projet-card:nth-child(2){transition-delay:0.1s}
     .projet-card:nth-child(3){transition-delay:0.2s}
+    .projet-card:nth-child(4){transition-delay:0.3s}
+    .projet-card:nth-child(5){transition-delay:0.4s}
+    .projet-card:nth-child(6){transition-delay:0.5s}
+    .projet-card:nth-child(7){transition-delay:0.6s}
     .projet-card:hover{border-color:var(--border2);transform:translateY(-4px);box-shadow:0 16px 40px rgba(0,0,0,0.3)}
     .projet-logo-img{width:72px;height:72px;border-radius:14px;background:rgba(255,255,255,0.04);border:1px dashed rgba(108,63,255,0.4);display:flex;align-items:center;justify-content:center;flex-shrink:0;overflow:hidden}
     .projet-logo-img img{width:100%;height:100%;object-fit:cover;border-radius:14px}
@@ -209,7 +213,7 @@
 
     @media(max-width:900px){
       nav{padding:1rem 1.5rem}.nav-links{display:none}
-      #accueil{grid-template-columns:1fr;padding:6.5rem 1.5rem 3rem;gap:2rem}.hero-right{display:none}
+      #accueil{padding:6.5rem 1.5rem 3rem;gap:2rem}
       .container{padding:3.5rem 1.5rem}
       .about-grid,.contact-layout,.stages-grid,.bts-grid,.parcours-grid{grid-template-columns:1fr;gap:2rem}
       .veille-grid{grid-template-columns:1fr}
@@ -263,20 +267,6 @@
     </div>
   </div>
 
-  <div class="hero-right">
-    <div class="hero-img-wrapper">
-      <div class="hero-img-glow"></div>
-      <div class="hero-img-frame">
-        <div class="hero-img-placeholder">
-          <span>🖼️</span>
-          <p>Place ta photo ici<br/>photo.jpg</p>
-        </div>
-      </div>
-      <div class="float-badge fb1"><span style="color:var(--teal)">●</span> Disponible</div>
-      <div class="float-badge fb2">🎓 BTS SIO SISR</div>
-    </div>
-  </div>
-
   <div class="scroll-hint">
     <div class="scroll-line"></div>
     Scroll pour explorer
@@ -290,33 +280,14 @@
     <p class="s-sub">Qui je suis, d'où je viens, et où je vais.</p>
     <div class="about-grid">
       <div class="about-body">
-        <p><strong>Bonjour, je suis Abenzoar Thétys</strong>, etudiant en BTS SIO option SISR.</p>
-        <p>J'ai des bases solides en <span class="hl">administration réseau</span>, support informatique et sécurisation des infrastructures. Mon parcours m'a permis d'acquérir des compétences concrètes à travers mes stages à l'IUT de Guadeloupe et à la Préfecture de Guadeloupe.</p>
+        <p><strong>Bonjour, je suis Abenzoar Thétys</strong>, étudiant en BTS SIO option SISR.</p>
+        <p>J'ai des bases solides en <span class="hl">administration réseau</span>, support informatique et sécurisation des infrastructures. Mon parcours m'a permis d'acquérir des compétences concrètes à travers mes stages à l'IUT de Guadeloupe et à la Préfecture de Basse-Terre.</p>
         <p>Mon objectif principal est de devenir <span class="hl">architecte réseau</span> pour concevoir et sécuriser les réseaux informatiques d'un hôpital ou d'une entreprise.</p>
-        <p>Je souhaite faire une <strong>Licence Professionnelle : </strong> Métiers des Réseaux Informatiques et Télécommunications parcours Administration et Sécurité des Systèmes pour renforcer mes compétences.</p>
-        <div class="skills-list">
-          <div class="skill-row">
-            <div class="skill-head"><span>Administration réseaux</span><span class="skill-pct" data-val="85">0%</span></div>
-            <div class="skill-bar"><div class="skill-fill" data-fill="85"></div></div>
-          </div>
-          <div class="skill-row">
-            <div class="skill-head"><span>Windows Server / Active Directory</span><span class="skill-pct" data-val="80">0%</span></div>
-            <div class="skill-bar"><div class="skill-fill" data-fill="80"></div></div>
-          </div>
-          <div class="skill-row">
-            <div class="skill-head"><span>Linux &amp; Support informatique</span><span class="skill-pct" data-val="78">0%</span></div>
-            <div class="skill-bar"><div class="skill-fill" data-fill="78"></div></div>
-          </div>
-          <div class="skill-row">
-            <div class="skill-head"><span>Virtualisation &amp; Cybersécurité</span><span class="skill-pct" data-val="72">0%</span></div>
-            <div class="skill-bar"><div class="skill-fill" data-fill="72"></div></div>
-          </div>
-        </div>
+        <p>Je souhaite faire une <strong>Licence Professionnelle :</strong> Métiers des Réseaux Informatiques et Télécommunications parcours Administration et Sécurité des Systèmes pour renforcer mes compétences.</p>
       </div>
       <div class="about-stats">
         <div class="stat-card"><div class="stat-icon">🎓</div><div><div class="stat-n">2</div><div class="stat-lbl">Ans de BTS SIO SISR</div></div></div>
         <div class="stat-card"><div class="stat-icon">💼</div><div><div class="stat-n">2</div><div class="stat-lbl">Stages effectués</div></div></div>
-        <div class="stat-card"><div class="stat-icon">🖧</div><div><div class="stat-n">3</div><div class="stat-lbl">Projets réalisés</div></div></div>
         <div class="stat-card"><div class="stat-icon">🏅</div><div><div class="stat-n">2</div><div class="stat-lbl">Certifications obtenues</div></div></div>
       </div>
     </div>
@@ -370,14 +341,14 @@
           <div class="t-item">
             <div class="t-dot done"></div>
             <div class="t-date">2025</div>
-            <div class="t-title">Stage — IUT de Saint Claude &amp; Préfecture de Basse-Terre</div>
-            <div class="t-sub">Weldom Basse-Terre · Guadeloupe</div>
+            <div class="t-title">Gestionnaire de Parc informatique</div>
+            <div class="t-sub">IUT de Saint-Claude</div>
           </div>
           <div class="t-item">
             <div class="t-dot done"></div>
-            <div class="t-date">2026</div>
-            <div class="t-title">Stage — Préfecture de Basse-Terre</div>
-            <div class="t-sub">Basse-Terre ; Guadeloupe</div>
+            <div class="t-date">2025-2026</div>
+            <div class="t-title">Technicien informatique</div>
+            <div class="t-sub">La préfecture de Basse-Terre</div>
           </div>
         </div>
       </div>
@@ -447,13 +418,13 @@
       <div class="stage-card">
         <div class="stage-hd">
           <div>
-            <div class="stage-company">Préfecture de Guadeloupe</div>
-            <div class="stage-period">Administration publique · 2025</div>
+            <div class="stage-company">Préfecture de Basse-Terre</div>
+            <div class="stage-period">Administration publique · 2025-2026</div>
           </div>
           <div class="stage-badge">Stage 2</div>
         </div>
         <div class="stage-body">
-          <img src="prefecture.jpg" alt="Préfecture de Guadeloupe" style="width:100%;height:160px;object-fit:cover;border-radius:12px;margin-bottom:1.2rem"/>
+          <img src="prefecture.jpg" alt="Préfecture de Basse-Terre" style="width:100%;height:160px;object-fit:cover;border-radius:12px;margin-bottom:1.2rem"/>
           <ul class="missions">
             <li>Finalisation de l'annuaire de la Préfecture</li>
             <li>Configuration de base des switchs réseau</li>
@@ -477,7 +448,7 @@
         <div class="projet-logo-img"><img src="biomag.jpg" alt="Biomag"/></div>
         <div>
           <div class="projet-name">Biomag — E-commerce</div>
-          <div class="projet-text">Étude comparative sur la virtualisation afin de choisir les outils les plus adaptés au déploiement de la boutique e-commerce Biomag. Proposition de solutions techniques avancées : sécurisation du serveur web en HTTPS avec un certificat autosigné, administration et sauvegarde distante d'une base MariaDB, et choix d'un serveur de virtualisation (configuration matérielle, extensions, RAID, types de disques).</div>
+          <div class="projet-text">Déploiement d'une boutique en ligne sécurisée avec virtualisation, base de données et certificat HTTPS.</div>
           <div class="tag-list"><span class="tag">Virtualisation</span><span class="tag">HTTPS</span><span class="tag">MariaDB</span><span class="tag">RAID</span></div>
         </div>
       </div>
@@ -485,7 +456,7 @@
         <div class="projet-logo-img"><img src="asterisk.jpg" alt="Asterisk"/></div>
         <div>
           <div class="projet-name">Asterisk — Téléphonie IP</div>
-          <div class="projet-text">Conception et déploiement d'une infrastructure de téléphonie IP reposant sur Asterisk, intégrant un téléphone IP fixe ainsi que des terminaux mobiles configurés via Zoiper. Configuration du menu vocal interactif, attribution des numéros courts pour l'interconnexion des postes et tests de validation (routage des appels, qualité des communications, stabilité Wi-Fi).</div>
+          <div class="projet-text">Infrastructure de téléphonie IP avec serveur Asterisk, téléphones IP et application mobile.</div>
           <div class="tag-list"><span class="tag">Asterisk</span><span class="tag">VoIP</span><span class="tag">Zoiper</span><span class="tag">IVR</span></div>
         </div>
       </div>
@@ -493,8 +464,40 @@
         <div class="projet-logo-img"><img src="winserver.jpg" alt="Windows Server"/></div>
         <div>
           <div class="projet-name">Windows Server 2022 — Infrastructure réseau</div>
-          <div class="projet-text">Conception et déploiement d'un environnement virtualisé basé sur Windows Server 2022 pour simuler l'infrastructure réseau d'une entreprise (clients Windows 10/11). Installation et promotion du serveur en contrôleur de domaine, configuration des rôles Active Directory, DNS et DHCP, structuration des unités d'organisation, application des GPO et validation par tests de connexion au domaine.</div>
+          <div class="projet-text">Création d'un domaine Active Directory avec DNS, DHCP et stratégies de groupe.</div>
           <div class="tag-list"><span class="tag">Windows Server</span><span class="tag">Active Directory</span><span class="tag">DNS</span><span class="tag">DHCP</span><span class="tag">GPO</span></div>
+        </div>
+      </div>
+      <div class="projet-card">
+        <div class="projet-logo-img"><span>📊</span></div>
+        <div>
+          <div class="projet-name">Nagios — Supervision réseau</div>
+          <div class="projet-text">Système de monitoring pour surveiller les serveurs et équipements réseau avec alertes.</div>
+          <div class="tag-list"><span class="tag">Nagios</span><span class="tag">Monitoring</span><span class="tag">Supervision</span><span class="tag">Alertes</span></div>
+        </div>
+      </div>
+      <div class="projet-card">
+        <div class="projet-logo-img"><span>🎫</span></div>
+        <div>
+          <div class="projet-name">GLPI — Gestion de parc IT</div>
+          <div class="projet-text">Solution de gestion de parc informatique avec inventaire automatique et système de ticketing.</div>
+          <div class="tag-list"><span class="tag">GLPI</span><span class="tag">Inventory</span><span class="tag">Ticketing</span><span class="tag">ITSM</span></div>
+        </div>
+      </div>
+      <div class="projet-card">
+        <div class="projet-logo-img"><span>🛡️</span></div>
+        <div>
+          <div class="projet-name">Fortigate — Pare-feu & Sécurité réseau</div>
+          <div class="projet-text">Configuration de pare-feu avec filtrage web, règles NAT et VPN SSL pour accès distant.</div>
+          <div class="tag-list"><span class="tag">Fortigate</span><span class="tag">Firewall</span><span class="tag">VPN SSL</span><span class="tag">Web Filter</span><span class="tag">NAT</span></div>
+        </div>
+      </div>
+      <div class="projet-card">
+        <div class="projet-logo-img"><span>🔒</span></div>
+        <div>
+          <div class="projet-name">Stormshield — Pare-feu nouvelle génération</div>
+          <div class="projet-text">Pare-feu avancé avec prévention d'intrusions (IPS) et segmentation réseau.</div>
+          <div class="tag-list"><span class="tag">Stormshield</span><span class="tag">NGFW</span><span class="tag">IPS</span><span class="tag">Segmentation</span></div>
         </div>
       </div>
     </div>
@@ -508,19 +511,19 @@
     <p class="s-sub">J'utilise Google Alerts pour rester informé en temps réel sur les évolutions du secteur IT.</p>
     <div class="veille-grid">
       <div class="veille-card">
-        <img src="alerts.jpg" alt="Google Alerts" style="width:100%;height:120px;object-fit:contain;border-radius:12px;margin-bottom:1rem;background:rgba(255,255,255,0.02)"/>
+        <span style="font-size:4rem;display:block;margin-bottom:1rem">🔔</span>
         <div class="veille-type">Outil de veille</div>
         <div class="veille-title">Google Alerts</div>
         <div class="veille-text">Je configure des mots-clés liés à mes centres d'intérêt comme <em>cybersecurity</em>, <em>artificial intelligence</em> ou <em>web development</em>, ce qui me permet de recevoir automatiquement des articles, des analyses et des actualités récentes par email, sans avoir à rechercher l'information chaque jour.</div>
       </div>
       <div class="veille-card">
-        <img src="cyber.jpg" alt="Cybersécurité" style="width:100%;height:120px;object-fit:cover;border-radius:12px;margin-bottom:1rem"/>
+        <span style="font-size:4rem;display:block;margin-bottom:1rem">🔐</span>
         <div class="veille-type">Veille technologique</div>
         <div class="veille-title">Cybersécurité &amp; IA</div>
         <div class="veille-text">Suivi des nouvelles menaces informatiques, des techniques de protection des infrastructures réseau, et des apports de l'intelligence artificielle dans la détection des intrusions et la gestion des incidents de sécurité.</div>
       </div>
       <div class="veille-card">
-        <img src="rgpd.jpg" alt="RGPD" style="width:100%;height:120px;object-fit:contain;border-radius:12px;margin-bottom:1rem;background:rgba(255,255,255,0.02)"/>
+        <span style="font-size:4rem;display:block;margin-bottom:1rem">⚖️</span>
         <div class="veille-type">Veille juridique</div>
         <div class="veille-title">RGPD &amp; Droit numérique</div>
         <div class="veille-text">Suivi des évolutions réglementaires liées à la protection des données personnelles, au droit informatique et aux obligations légales des entreprises en matière de sécurité informatique (RGPD, NIS2, CNIL).</div>
@@ -568,37 +571,34 @@
       <div class="contact-left">
         <p>Je suis disponible pour toute opportunité professionnelle, stage ou collaboration dans le domaine des réseaux et de l'infrastructure informatique.</p>
         <div class="contact-items">
-          <a href="mailto:<!-- TON EMAIL -->" class="contact-item">
+          <a href="mailto:abenzoarthetys3@gmail.com" class="contact-item">
             <div class="contact-icon">📧</div>
-            <!-- ton.email@exemple.fr -->
+            abenzoarthetys3@gmail.com
           </a>
-          <a href="<!-- LIEN LINKEDIN -->" class="contact-item" target="_blank">
+          <a href="https://www.linkedin.com/in/thétys-abenzoar/" class="contact-item" target="_blank">
             <div class="contact-icon">💼</div>
             LinkedIn — Abenzoar Thétys
           </a>
-          <a href="<!-- LIEN CV -->" class="contact-item" target="_blank">
-            <div class="contact-icon">📄</div>
-            Télécharger mon CV
-          </a>
-          <a href="<!-- LIEN LETTRE DE MOTIVATION -->" class="contact-item" target="_blank">
+          <a href="https://www.mediafire.com/file/davzd64a4yqcvqq/Lettre_De_Motivation_.pdf/file" class="contact-item" target="_blank">
             <div class="contact-icon">✉️</div>
             Lettre de Motivation
           </a>
         </div>
       </div>
       <div class="contact-right">
+        <form action="mailto:abenzoarthetys3@gmail.com" method="post" enctype="text/plain">
         <div class="form-title">Formulaire de contact</div>
         <div class="form-row">
-          <div class="field"><label>Nom et prénom</label><input type="text" placeholder="Votre nom complet"/></div>
-          <div class="field"><label>Entreprise (facultatif)</label><input type="text" placeholder="Votre entreprise"/></div>
+          <div class="field"><label>Nom et prénom</label><input type="text" name="nom" placeholder="Votre nom complet" required/></div>
+          <div class="field"><label>Entreprise (facultatif)</label><input type="text" name="entreprise" placeholder="Votre entreprise"/></div>
         </div>
         <div class="form-row">
-          <div class="field"><label>Adresse e-mail</label><input type="email" placeholder="votre@email.fr"/></div>
-          <div class="field"><label>Téléphone</label><input type="tel" placeholder="06 00 00 00 00"/></div>
+          <div class="field"><label>Adresse e-mail</label><input type="email" name="email" placeholder="votre@email.fr" required/></div>
+          <div class="field"><label>Téléphone</label><input type="tel" name="telephone" placeholder="06 00 00 00 00"/></div>
         </div>
         <div class="field">
           <label>Problème / Sujet</label>
-          <select>
+          <select name="sujet" required>
             <option value="">Sélectionnez un sujet</option>
             <option>Dépannage informatique</option>
             <option>Installation matériel</option>
@@ -609,8 +609,9 @@
             <option>Autre</option>
           </select>
         </div>
-        <div class="field"><label>Description de votre demande</label><textarea rows="4" placeholder="Décrivez votre besoin..."></textarea></div>
-        <button class="btn btn-primary" style="width:100%;justify-content:center;">Envoyer →</button>
+        <div class="field"><label>Description de votre demande</label><textarea name="message" rows="4" placeholder="Décrivez votre besoin..." required></textarea></div>
+        <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;">Envoyer →</button>
+        </form>
       </div>
     </div>
   </div>
@@ -620,8 +621,8 @@
   <div class="footer-l">Portfolio de <span>Abenzoar Thétys</span> · Technicien Systèmes &amp; Réseaux · BTS SIO SISR</div>
   <div class="footer-r">
     <a href="#accueil" class="footer-link">↑ Haut</a>
-    <a href="mailto:<!-- TON EMAIL -->" class="footer-link">Email</a>
-    <a href="<!-- LINKEDIN -->" class="footer-link">LinkedIn</a>
+    <a href="mailto:abenzoarthetys3@gmail.com" class="footer-link">Email</a>
+    <a href="https://www.linkedin.com/in/thétys-abenzoar/" class="footer-link">LinkedIn</a>
   </div>
 </footer>
 
